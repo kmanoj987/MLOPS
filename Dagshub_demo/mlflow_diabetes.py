@@ -34,9 +34,9 @@ X_test = fill.transform(X_test)
 # Define the model hyperparameters
 params = {
     "solver": "lbfgs",
-    "max_iter": 22,
+    "max_iter": 10,
     "multi_class": "auto",
-    "random_state": 123,
+    "random_state": 175,
 }
 
 # Train the model
@@ -63,7 +63,7 @@ mlflow.set_experiment("LR experiments 23_08")
 #mlflow.set_tracking_uri(uri="http://127.0.0.1:5000/")
 
 with mlflow.start_run():
-    mlflow.set_tag("author", "AJ")  # Replace with your actual name
+    mlflow.set_tag("author", "manoj")  # Replace with your actual name
     mlflow.log_params(params)
     mlflow.log_metrics({
         'accuracy': report_dict['accuracy'],
